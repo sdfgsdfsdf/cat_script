@@ -4,7 +4,7 @@ while true; do
     $command
 
     if [ $? -ne 0 ]; then
-        echo "命令执行失败，退出循环"
+        echo "err"
         exit 1
     fi
 
