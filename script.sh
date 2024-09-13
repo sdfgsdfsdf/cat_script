@@ -14,7 +14,7 @@ get_fee_rate() {
 while [ $count -lt $max_success ]; do
     get_fee_rate
     
-    new_fee_rate=$(echo "scale=0; $fee_rate * 1.2" | bc)
+    new_fee_rate=$(echo "scale=0; $fee_rate * 1" | bc)
 
     command="sudo yarn cli mint -i 45ee725c2c5993b3e4d308842d87e973bf1951f5f7a804b21e4dd964ecd12d6b_0 5 --fee-rate $new_fee_rate"
     
